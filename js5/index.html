@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <button onclick="abc('button click')">Visit Here</button>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTWDmLu0fozwDGbSAsRrLTGrVy7J4Jf6zAtHzF69sS&s" alt=""
+onmouseover="abc('Click event hover')"
+onmouseout="abc('click event Out')"> -->
+
+
+    <!-- <button onclick="abc('Button ')">Visit Here</button>
+<img src="data:image/jpeg;base64,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" alt=""
+onmouseover="abc('Mouse In Event')"
+onmouseout="abc('Out huehue')"> -->
+
+
+
+    <!-- <input type="text" onfocus="abc('input focus')"
+onblur="abc('input blur')"
+name="" id=""> -->
+    <!-- <input type="text" name="" id="hue">
+<button onclick="getvalue()">add</button> -->
+
+    <!-- <input type="text" name="" id="hue">
+<input type="text" disabled name="" id="er">
+<button onclick="addvalue()">add</button> -->
+
+    <!-- <input type="text" name="" id="huehue"> -->
+
+
+    <!-- <input type="text" disabled name="" id="er"> -->
+
+    <!-- 
+<p id="er" ></p>
+<button onclick="advalue()">add</button> -->
+
+
+
+    <!-- <form onsubmit="abc(event)">
+<button>add</button>
+</form> -->
+
+    <!-- <input type="text"  name="" id="tx">
+<input type="text" disabled name="" id="er">
+<button onclick="but()">add</button> -->
+
+
+    <!-- <img 
+width="500px"
+src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt=""
+onmouseover="abc(this)"
+onmouseout="ab(this)"> -->
+    <!-- 
+<div class="box" onclick="xyz(this)"></div> -->
+    <!-- 
+<div  id="box"></div>
+    <button onclick="shapes('circle')">Circle</button>
+    <button onclick="shapes('square')">Square</button>
+    <button onclick="shapes('rectangle')" >Rectangle</button>
+ -->
+
+<!-- 
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis odit veritatis eaque ipsa deserunt
+        exercitationem molestias sit ducimus nulla, debitis illum nisi saepe iure aliquid perspiciatis vero dolore,
+        quod, et quam suscipit. Quisquam hic repudiandae laboriosam ipsam expedita pariatur, soluta quia laudantium
+        voluptatem beatae. Suscipit dolore dolorum unde porro odio!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis odit veritatis eaque ipsa deserunt
+        exercitationem molestias sit ducimus nulla, debitis illum nisi saepe iure aliquid perspiciatis vero dolore,
+        quod, et quam suscipit. Quisquam hic repudiandae laboriosam ipsam expedita pariatur, soluta quia laudantium
+        voluptatem beatae. Suscipit dolore dolorum unde porro odio!</p>
+    <div id="parent">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis odit veritatis eaque ipsa deserunt
+            exercitationem molestias sit ducimus nulla, debitis illum nisi saepe iure aliquid perspiciatis vero dolore,
+            quod, et quam suscipit. Quisquam hic repudiandae laboriosam ipsam expedita pariatur, soluta quia laudantium
+            voluptatem beatae. Suscipit dolore dolorum unde porro odio!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis odit veritatis eaque ipsa deserunt
+            exercitationem molestias sit ducimus nulla, debitis illum nisi saepe iure aliquid perspiciatis vero dolore,
+            quod, et quam suscipit. Quisquam hic repudiandae laboriosam ipsam expedita pariatur, soluta quia laudantium
+            voluptatem beatae. Suscipit dolore dolorum unde porro odio!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis odit veritatis eaque ipsa deserunt
+            exercitationem molestias sit ducimus nulla, debitis illum nisi saepe iure aliquid perspiciatis vero dolore,
+            quod, et quam suscipit. Quisquam hic repudiandae laboriosam ipsam expedita pariatur, soluta quia laudantium
+            voluptatem beatae. Suscipit dolore dolorum unde porro odio!</p>
+    </div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum  -->
+
+   <!-- slider strt -->
+   <!-- <img src="" alt="" id="showslide">
+
+   <div  id="imgparent" class="imgparent">
+
+
+       <img src="https://picsum.photos/id/237/200/300" alt="">
+       <img src="https://picsum.photos/id/238/200/300" alt="">
+       <img src="https://picsum.photos/id/239/200/300" alt="">
+       <img src="https://picsum.photos/id/236/200/300" alt="">
+   </div>
+
+
+   <button onclick="prevslide()" >prev</button>
+   <button onclick="nextslide()" >next</button> -->
+
+
+
+
+           <!-- Slider End -->
+<!-- 
+    <button onclick="addval()">Add</button>
+   <div id="mn"></div>
+         -->
+
+
+
+         <!-- <div>
+            <input type="text" name="" id="inp">
+            <button onclick="addvalue()">Add</button>
+            <button onclick="delvalue()">delete</button>
+            <ul id="mn"></ul>
+         </div> -->
+
+
+         <!-- <input type="text" name="" id="inp">
+         <button onclick="add()">submit</button> -->
+
+<!-- 
+
+         <input type="text" name="" id="inp">
+         <p id="nm"></p>
+         <p id="rol"></p> 
+         <p id="age"></p> 
+         <p id="ins"></p> 
+         <button onclick="add()">submit</button>  -->
+
+    <!-- <div>
+        <input type="text" name="" id="firstname">
+        <input type="text" name="" id="lastname">
+        <input type="email" name="" id="email">
+        <button onclick="submit()">Submit</button>
+    </div> -->
+
+
+
+
+    <!-- <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-4">
+                <h1 class="fs-2 text-center">Min</h1>
+                <h1 id="displaymin" class="fs-2 text-center">00</h1>
+            </div>
+            <div class="col-md-4">
+                <h1 class="fs-2 text-center">sec</h1>
+                <h1 id="displaysec" class="fs-2 text-center">00</h1>
+            </div>
+            <div class="col-md-4">
+                <h1 class="fs-2 text-center">millisec</h1>
+                <h1 id="displaymillisec" class="fs-2 text-center">00</h1>
+            </div>
+        </div>
+        <button onclick="starttimer()">Start</button>
+        <button onclick="pausetimer()">Stop</button>
+        <button onclick="resettimer()">reset</button>
+    </div> -->
+
+    <div class="container">
+        <input type="text" name="" id="inp">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+           <button onclick="getvalue(1)" class="p-2 m-2 ">1<button>
+           <button onclick="getvalue(2)" class="p-2 m-2 ">2<button>
+           <button onclick="getvalue(3)" class="p-2 m-2 ">3<button>
+           <button onclick="getvalue('+')" class="p-2 m-2 ">+<button>
+                    
+                </div>
+                <div>
+           <button onclick="getvalue(4)" class="p-2 m-2 ">4<button>
+           <button onclick="getvalue(5)" class="p-2 m-2 ">5<button>
+           <button onclick="getvalue(6)" class="p-2 m-2 ">6<button>
+           <button onclick="getvalue('-')" class="p-2 m-2 ">-<button>
+                    
+                </div>
+                <div>
+           <button onclick="getvalue(7)" class="p-2 m-2 ">7<button>
+           <button onclick="getvalue(8)" class="p-2 m-2 ">8<button>
+               <button onclick="getvalue(9)" class="p-2 m-2 ">9<button>
+               <button onclick="getvalue('*')" class="p-2 m-2 ">x<button>
+                    
+                </div>
+                <div>
+           <button onclick="getvalue('/')" class="p-2 m-2 ">/<button>
+           <button onclick="getvalue('.')" class="p-2 m-2 ">.<button>
+               <button onclick="getvalue(0)" class="p-2 m-2 ">0<button>
+               <button onclick="equ('=')" class="p-2 m-2 ">=<button>
+                    
+                </div>
+                <div>
+           <button onclick="clrvalue('/')" class="p-2 m-2 ">C<button>
+          
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- first name lastname email pass content cnic add -->
